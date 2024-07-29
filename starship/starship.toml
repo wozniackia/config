@@ -78,3 +78,37 @@ format = '[[  $time ](fg:#f8f8f2 bg:#4EA8DE)]($style)'
 [character]
 success_symbol = '[](fg:#80FFDB)'
 error_symbol = '[](fg:#80FFDB) '
+format = """
+$directory\
+$git_branch\
+$git_status\
+$line_break\
+"""
+
+[directory]
+style = "fg:#edf2f4"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "fg:#edf2f4"
+format = '[[ $symbol $branch ](fg:#edf2f4)]($style)'
+
+[git_status]
+style = "fg:#edf2f4"
+format = '[[($all_status$ahead_behind )](fg:#edf2f4)]($style)'
+
+[time]
+disabled = false
+time_format = "%T" # Hour:Minute:Second Format
+style = "fg:#edf2f4"
+format = '[[  $time ](fg:#edf2f4)]($style)'
+
+[cmd_duration]
+min_time = 1
+show_milliseconds = true
+format = '[$duration](fg:#edf2f4)'
+
+[line_break]
